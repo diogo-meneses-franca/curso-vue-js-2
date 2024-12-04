@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ titulo }}</p>
+    <input type="text" v-bind:value="titulo" v-on:input="titulo = $event.target.value">
+    <!--No exemplo abaixo o v-model desempenha a mesma função do v-bind + v-on:input do exemplo acima -->
+    <!--Quando se utiliza o v-bind ele faz o one way data bind atualizando o que está no html com os dados do vue-->
+    <!--Quando se utiliza o v-on ocorre também one way data bind no sentido inverso o html pode atualizar algum dado do vue-->
+    <!--Já quando se utiliza o v-model ocorre o two way data binding que atualiza tanto os dados do html como os do vue bidirecionalmente-->
+    <input type="text" v-model="titulo">
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJS!'
+        }
+    })
+</script>
