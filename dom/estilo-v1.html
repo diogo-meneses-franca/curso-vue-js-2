@@ -1,0 +1,41 @@
+<script src="https://unpkg.com/vue@2"></script>
+<style>
+    #app {
+        display: flex;
+        justify-content: space-around;
+    }
+    .demo {
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .c1 {
+        background-color: red;
+    }
+    .c2 {
+        background-color: green;
+    }
+    .c3 {
+        background-color: yellow;
+    }
+</style>
+<div id="app">
+    <div class="demo" 
+        @click="aplicarc1 = !aplicarc1"
+        :class="{c1: aplicarc1}">
+    </div>
+    <div class="demo c2"></div>
+    <div class="demo c3"></div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            aplicarc1: false
+        }
+
+    })
+</script>
