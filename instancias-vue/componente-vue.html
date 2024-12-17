@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app">
+    <!--monta o template dentro de comp, mas no browser aparece como uma <div></div>-->
+    <comp></comp>
+    <comp></comp>
+    <comp></comp>
+</div>
+
+<script>
+    //cria um componente e isso permite que ele seja reproduzido mais de uma vez na DOM
+    Vue.component('comp', {
+        template: `
+            <div>
+                <h1>{{ aula }}</h1>
+                <h2>{{ modulo }}</h2>
+                <button @click="alterarAula">Alterar aula</button>
+                <button @click="alterarModulo">Alterar modulo</button>               
+            </div>
+        `,
+        data: function () {
+            return {
+                aula: 'Aula: Montando Instancia Vue',
+                modulo: 'Módulo instancia Vue'
+            }
+        },
+        methods: {
+            alterarAula() {
+                this.aula += '#'
+            },
+            alterarModulo() {
+                this.modulo += '#'
+            }
+        }
+    })
+    const vm = new Vue({
+        el: '#app'
+    })
+</script>
