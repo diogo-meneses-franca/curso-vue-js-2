@@ -24,14 +24,16 @@
     }
 </script>
 
-<style>
-    .contador span {
+<!--scoped define que o estilo será aplicado apenas a este componente
+portanto os estilos não serão aplicados a todos os button e span, somente naqueles dentro do componente-->
+<style scoped>
+    span {
         border-bottom: 1px solid #CCC;
         height: 30px;
         padding: 5px 25px;
     }
 
-    .contador button {
+    button{
         height: 30px;
         width: 30px;
         border-radius: 15px;
