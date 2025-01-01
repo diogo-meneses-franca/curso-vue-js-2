@@ -23,11 +23,13 @@ export default {
                 fonte: 'Jornal do Empreendedor',
                 texto: 'Lembre-se sempre que você é absolutamente único. Assim como todos os outros.',
                 autor: 'Margaret Mead'
-            }, { 
+                },
+                { 
                 fonte: 'Frases de Mãe',
                 texto: 'Isso não é um quarto, é um chiqueiro.',
                 autor: 'Roberta'
-            }, {
+                }, 
+                {
                 fonte: 'Frases de Pai',
                 texto: 'Vou contar até 3! 1, 2, 2...',
                 autor: 'Gustavo'
