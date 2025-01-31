@@ -17,7 +17,7 @@
 			<b-list-group-item v-for="(usuario, id) in usuarios" :key="id">
 				<strong>Nome : </strong> {{ usuario.nome }} <br>
 				<strong>Email : </strong> {{ usuario.email }} <br>
-				<strong>ID : </strong> {{ id }}
+				<strong>ID : </strong> {{ usuario.id }}
 			</b-list-group-item>
 		</b-list-group>
 	</div>
@@ -42,7 +42,13 @@ export default {
 			this.$http.get('usuarios.json').then(response => {
 				this.usuarios = response.data
 			})
-		}
+			this.$http.defaults.headers.common['Authorization'] = 'Bearer token'
+		},
+		// carregarUsuarios() {
+		// 	this.$http.get('https://curso-vue-33c5b-default-rtdb.firebaseio.com/', 'usuarios.json').then(response => {
+		// 		this.usuarios = response.data
+		// 	})
+		// }
 	}
 }
 </script>
